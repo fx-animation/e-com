@@ -1,6 +1,9 @@
+/* Correction du nesting non supporté */
 .cartMainContainer {
   font-family: "Inter", sans-serif;
   margin: 2% 3% 4%;
+
+
 .cHeader {
   font-size: 1.5rem;
   line-height: 2rem;
