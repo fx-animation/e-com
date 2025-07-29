@@ -2,7 +2,7 @@
 .cartMainContainer {
   font-family: "Inter", sans-serif;
   margin: 2% 3% 4%;
-
+}
 
 .cHeader {
   font-size: 1.5rem;
@@ -85,7 +85,7 @@
   background: none;
   transition: 0.3s ease;
 }
-tbody td p {
+.cart-table tbody td p {
   color: #111827;
   white-space: nowrap;
   text-align: center;
@@ -304,7 +304,6 @@ tbody td p {
     align-items: center;
     gap: 0.4rem;
     margin-bottom: 0.3rem;
-  }
   }
   .cart-mobile-info p {
     text-align: left;

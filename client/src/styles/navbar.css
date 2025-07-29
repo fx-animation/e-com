@@ -136,9 +136,10 @@
 }
 .dropdown li:hover {
   background-color: #f7f6f6;
-  .a {
-    color: #54bab9;
-  }
+}
+
+.dropdown li:hover a {
+  color: #54bab9;
 }
 .dropdown li a,
 .dropdown li button {

@@ -112,7 +112,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  @media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 500px) {
+  .reset-pass-btn {
     flex-direction: column-reverse;
   }
 }
@@ -194,7 +197,10 @@
 .Error-div-center img {
   height: 450px;
   object-fit: contain;
+}
+
 @media screen and (max-width: 500px) {
+  .Error-div-center img {
     height: 350px;
   }
 }
