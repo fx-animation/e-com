@@ -59,7 +59,7 @@ const SignUpPage = () => {
             <Link
               style={{
                 textDecoration: "none",
-                color: "#6286A0",
+                color: "#ff008c",
                 pointerEvents: "cursor",
               }}
               to="/login"

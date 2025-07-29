@@ -86,12 +86,12 @@ const Navbar = () => {
       <div className="nav-button">
         <div className="nav-btn">
           <div className="btnIcon">
-            <Link to="/products" style={{ color: "#1a1a1a" }}>
+            <Link to="/products" style={{ color: "#fff" }}>
               <FiSearch />
             </Link>
           </div>
           <div className="btnIcon">
-            <Link to="/cart" style={{ color: "#1a1a1a" }}>
+            <Link to="/cart" style={{ color: "#fff" }}>
               <FaShoppingCart />
               <div className="navAmount">{auth?.cartSize || 0}</div>
             </Link>
@@ -99,11 +99,8 @@ const Navbar = () => {
           <div className="btnIcon">
             {auth ? (
               <>
-                <CgProfile />
+                <CgProfile color="#fff" />
                 <ul className="dropdown">
-                  <li>
-                    <Link to="/orders">Orders</Link>
-                  </li>
                   <li>
                     <button
                       type="button"
@@ -119,7 +116,7 @@ const Navbar = () => {
                 </ul>
               </>
             ) : (
-              <Link to="/login" style={{ color: "#1a1a1a", fontSize: "30px" }}>
+              <Link to="/login" style={{ color: "#fff", fontSize: "30px" }}>
                 <BiLogIn />
               </Link>
             )}

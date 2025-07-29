@@ -5,15 +5,15 @@ import ContactForm from "../components/ContactForm";
 
 const ContactPage = () => {
   const combinedText = {
-    text1: "#Hey you!",
-    text2: "Message:  Just Do It!",
+    text1: "#HEY YOU!",
+    text2: "JUST DO IT NOW!",
     url: "https://nike0197.netlify.app/assets/1-f4da6767.jpg",
   };
   return (
     <>
-      <div>
+      {/* <div>
         <Header combinedText={combinedText} />
-      </div>
+      </div> */}
       <div className="contact-details">
         <div className="company-details">
           <span>GET IN TOUCH</span>
@@ -59,6 +59,9 @@ const ContactPage = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+      </div>
+      <div>
+        <Header combinedText={combinedText} />
       </div>
       <ContactForm />
     </>

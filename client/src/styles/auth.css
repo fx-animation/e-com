@@ -1,8 +1,12 @@
-.login-page {
-  height: 100vh;
+/* Cadre moderne pour la boîte de connexion */
+.login-page, .signup-page {
+  min-height: 100vh;
   width: 100%;
   display: flex;
-  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/nike-neon-bg.avif') center/cover no-repeat;
+  color: #fff;
   flex-direction: row-reverse;
 }
 .login-div {
@@ -11,13 +15,18 @@
   justify-content: center;
   align-items: center;
 }
+/* Cadre moderne pour la boîte de connexion */
 .login-box {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 3rem 2.5rem;
+  border-radius: 1.2rem;
+  max-width: 420px;
   width: 100%;
-  padding: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 .login-image-r {
   width: 100%;
@@ -25,8 +34,9 @@
   object-fit: contain;
   background-color: #f7ecde;
 }
+/* Titre login moderne */
 .login-heading {
-  color: rgb(31 41 55 / 1);
+  color: #fff;
   font-size: clamp(2rem, 2.5vw, 3rem);
   line-height: 2rem;
   font-weight: 700;
@@ -53,8 +63,9 @@
 .input-div input {
   width: 100%;
   border-radius: 0.5rem;
-  color: rgb(31 41 55 / 1);
-  border: 1px solid rgb(31 41 55 / 1);
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid #fff;
   margin-top: 0.5rem;
   padding: 0.6rem 0.75rem;
   text-align: left;
@@ -67,12 +78,13 @@
   margin-top: 0.75rem;
   border: 0;
   font-weight: 500;
-  color: #ffffff;
-  background-color: #7a9cb8;
+  color: #fff;
+  background-color: #ff008c;
   cursor: pointer;
+  transition: background 0.2s;
 }
 .login-button:hover {
-  background-color: #6286a0;
+  background-color: #d60074;
 }
 .forget-button button {
   border: none;
@@ -87,9 +99,11 @@
 .forget-button button:hover {
   color: #6286a0;
 }
-.signup-link {
+.signup-link,
+.login-link {
   text-decoration: none;
-  color: #6286a0;
+  font-weight: 600;
+  text-align: left;
 }
 .reset-pass-btn {
   display: flex;
@@ -103,13 +117,26 @@
   }
 }
 @media screen and (max-width: 1000px) {
+  .login-page, .signup-page {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
   .div1 {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
   .div2 {
     display: none;
   }
   .login-box {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    box-shadow: none;
     padding: 8%;
   }
   .login-form {
@@ -167,7 +194,40 @@
 .Error-div-center img {
   height: 450px;
   object-fit: contain;
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     height: 350px;
   }
+}
+
+.login-form label,
+.login-form input::placeholder,
+.forget-button button,
+.login-subheading,
+.signup-link,
+.login-link {
+  color: #fff !important;
+}
+
+/* Set the 'Sign up' link on the login page to pink */
+.login-subheading .signup-link {
+  color: #ff008c !important;
+}
+/* Set the 'Log in' link on the signup page to pink */
+.login-subheading .login-link {
+  color: #ff008c !important;
+}
+.login-form label,
+.login-form input::placeholder,
+.forget-button button,
+.login-subheading,
+.signup-link,
+.login-link {
+  color: #fff !important;
+}
+
+/* Force all text in the subscription section to white */
+.subscription,
+.subscription *,
+.subscription :is(h1, h2, h3, h4, h5, h6, p, span, label, input, button, a) {
+  color: #fff !important;
 }

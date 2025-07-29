@@ -1,3 +1,6 @@
+.desc h4 {
+  color: #111 !important;
+}
 .search_header {
   background-image: url("../Images/1.jpg");
   background-size: cover;
@@ -239,16 +242,17 @@
   font-size: 14px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  background-color: #e5e5e5;
-  color: #777;
-  border: 1px solid lightgray;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #111;
   border-radius: 0.375rem;
   cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 .btn-filter:hover {
-  background-color: #e8f6ea;
-  color: #54bab9;
-  border: 1px solid #54bab9;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
 }
 .emptyProductList {
   display: flex;
@@ -280,7 +284,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #54bab9;
+  background: #111;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -290,6 +294,10 @@
   cursor: pointer;
   margin: 1rem auto 0 auto;
   position: static;
+  transition: background 0.2s;
+}
+.btn-cart:hover {
+  background: #333;
 }
 @media screen and (max-width: 600px) {
   .btn-cart {

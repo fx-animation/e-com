@@ -1,17 +1,66 @@
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-const Star = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const halfStar = rating % 1 !== 0 ? <FaStarHalfAlt /> : null;
-  const emptyStars = 5 - Math.ceil(rating);
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { useState } from "react";
+import PropTypes from "prop-types";
+
+const Star = ({ rating, onRate }) => {
+  const [hovered, setHovered] = useState(null);
+  const [selected, setSelected] = useState(rating);
+  const displayRating = hovered !== null ? hovered : selected;
+  const fullStars = Math.floor(displayRating);
+
+  const handleClick = (i) => {
+    setSelected(i + 1);
+    if (onRate) onRate(i + 1);
+  };
 
   return (
-    <>
-      {Array(fullStars).fill().map((_, i) => <FaStar key={i} />)}
-      {halfStar && <FaStarHalfAlt key={fullStars} />}
-      {Array(emptyStars).fill().map((_, i) => <FaRegStar key={i + fullStars + (halfStar ? 1 : 0)} />)}
-    </>
+    <span style={{ cursor: "pointer", display: "inline-flex" }}>
+      {Array(5).fill().map((_, i) => {
+        if (i < fullStars) {
+          return (
+            <FaStar
+              key={i}
+              color="#ffb400"
+              onMouseEnter={() => setHovered(i + 1)}
+              onMouseLeave={() => setHovered(null)}
+              onClick={() => handleClick(i)}
+              style={{ transition: "color 0.2s" }}
+              data-testid={`star-${i+1}`}
+            />
+          );
+        } else if (i === fullStars && displayRating % 1 !== 0) {
+          return (
+            <FaStarHalfAlt
+              key={i}
+              color="#ffb400"
+              onMouseEnter={() => setHovered(i + 1)}
+              onMouseLeave={() => setHovered(null)}
+              onClick={() => handleClick(i)}
+              style={{ transition: "color 0.2s" }}
+              data-testid={`star-${i+1}`}
+            />
+          );
+        } else {
+          return (
+            <FaRegStar
+              key={i}
+              color="#ffb400"
+              onMouseEnter={() => setHovered(i + 1)}
+              onMouseLeave={() => setHovered(null)}
+              onClick={() => handleClick(i)}
+              style={{ transition: "color 0.2s" }}
+              data-testid={`star-${i+1}`}
+            />
+          );
+        }
+      })}
+    </span>
   );
+};
+Star.propTypes = {
+  rating: PropTypes.number.isRequired,
+  onRate: PropTypes.func,
 };
 
 export default Star;

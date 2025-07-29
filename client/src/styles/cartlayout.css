@@ -78,7 +78,8 @@
 }
 .cart-name-cont-btn button:hover {
   text-decoration: none;
-  color: #54bab9;
+  color: #111;
+  background: none;
   transition: 0.3s ease;
 }
 tbody td p {
@@ -165,7 +166,7 @@ tbody td p {
   font-weight: 600;
 }
 .couponInput button {
-  background-color: red;
+  background-color: #ff008c;
   color: white;
   border-style: none;
   padding: 0.5rem 1.2rem;
@@ -175,7 +176,7 @@ tbody td p {
   cursor: not-allowed;
 }
 .couponInput .disabledBtn:hover {
-  background-color: red;
+  background-color: #ff008c;
   color: white;
   cursor: not-allowed;
   opacity: 0.4;
@@ -196,12 +197,12 @@ tbody td p {
   border-top: 2px #727272 solid;
 }
 .checkout-btn {
-  background-color: red;
+  background-color: #ff008c;
   color: white;
   width: 100%;
   font-weight: 700;
   font-size: 16px;
-  border: 1px solid red;
+  border: 1px solid rgb(7, 7, 7);
   border-radius: 9px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -211,12 +212,12 @@ tbody td p {
 }
 .checkout-btn:hover,
 .couponInput button:hover {
-  color: red;
+  color: #ff008c;
   background-color: white;
-  border: 1px solid red;
+  border: 1px solid rgb(5, 5, 5);
 }
 .disabled:hover {
-  background-color: red;
+  background-color: #ff008c;
   color: white;
   cursor: not-allowed;
   opacity: 0.4;
