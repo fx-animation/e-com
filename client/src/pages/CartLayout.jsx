@@ -132,23 +132,18 @@ const CartLayout = () => {
           )}
         </div>
         <div className="cart-container-2">
-          <div className="cartSummary">
-<<<<<<< HEAD
-            {/* Affichage des coupons disponibles */}
-            <div style={{ marginBottom: "1rem", background: "#ff008c", padding: "10px", borderRadius: "8px" }}>
-              <strong>Profitez de nos coupons&nbsp;:</strong>
-              <ul style={{ margin: 0, paddingLeft: "1.2em" }}>
-                {availableCoupons.map((c) => (
-                  <li key={c.code}>
-                    <span style={{ fontWeight: 600 }}>{c.code}</span> &mdash; {c.description}
-                  </li>
-                ))}
-              </ul>
-=======
-            <div style={{marginBottom: '10px', background: '#fff0fa', borderRadius: '8px', padding: '8px 12px', color: '#ff008c', fontWeight: 700, fontSize: '1rem', textAlign: 'center'}}>
-              Coupons disponibles : <span style={{margin: '0 6px', background: '#ffe6f5', borderRadius: '4px', padding: '2px 6px'}}>FXSTUDIO</span> <span style={{margin: '0 6px', background: '#ffe6f5', borderRadius: '4px', padding: '2px 6px'}}>NIKE2025</span>
->>>>>>> 309d9276d5a0a910d782f185940a0033f93d6250
-            </div>
+<div className="cartSummary">
+  {/* Affichage des coupons disponibles */}
+  <div style={{ marginBottom: "1rem", background: "#ff008c", padding: "10px", borderRadius: "8px" }}>
+    <strong>Profitez de nos coupons&nbsp;:</strong>
+    <ul style={{ margin: 0, paddingLeft: "1.2em" }}>
+      {availableCoupons.map((c) => (
+        <li key={c.code}>
+          <span style={{ fontWeight: 600 }}>{c.code}</span> &mdash; {c.description}
+        </li>
+      ))}
+    </ul>
+  </div>
             <h3 className="summaryHeader">Order Summary</h3>
             <div className="summaryInfo">
               <p>
