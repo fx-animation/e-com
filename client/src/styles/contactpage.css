@@ -23,9 +23,9 @@
   .Header_title {
     padding: 7% 5%;
   }
-  .Header_title h1 {
-    /* font-size: 36px; */
-  }
+  /* .Header_title h1 {
+    font-size: 36px;
+  } */
   .Header_title h2 {
     font-size: 20px;
   }
@@ -35,9 +35,9 @@
   .Header_title {
     padding: 7% 5% 9%;
   }
-  .Header_title h1 {
-    /* font-size: 27px; */
-  }
+  /* .Header_title h1 {
+    font-size: 27px;
+  } */
   .Header_title h2 {
     font-size: 16px;
     margin-top: -5px;
@@ -187,14 +187,28 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .form-details .people {
-    display: none;
+  .form-details {
+    flex-direction: column;
+    padding: 24px;
   }
   .form-details form {
     width: 100%;
   }
-  .form-details {
-    padding: 24px;
+  .form-details .people {
+    width: 100%;
+    margin-top: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+  }
+  .form-details .people div {
+    width: 45%;
+    min-width: 200px;
+    margin: 0 0 10px 0;
+    justify-content: flex-start;
   }
   .form-details form h2 {
     font-size: 25px;

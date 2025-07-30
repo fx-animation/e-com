@@ -26,7 +26,7 @@ const Footer = () => {
 
 
 
-      <section className="footer footer-bg">
+      <section className="footer footer-bg" id="footer">
         <div className="footer-main">
           <div className="footer-container">
             <div className="sec aboutus">

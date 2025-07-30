@@ -77,7 +77,7 @@ const ContactForm = () => {
           />
           <p>
             <span>Shin Sud </span>Software Engineer <br />
-            claire.sud@gmail.com
+            claire.ryu@gmail.com
           </p>
         </div>
         <div>
@@ -88,7 +88,7 @@ const ContactForm = () => {
           />
           <p>
             <span>Bryan Dev</span>Software Designer <br />
-            bryan.dev@gmail.com
+            poker.dev@gmail.com
           </p>
         </div>
         <div>

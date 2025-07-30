@@ -84,15 +84,19 @@ const Navbar = () => {
         >
           Products
         </NavLink>
-        <NavLink
-          to="/"
+        <a
+          href="#footer"
           className="nav-link"
           onClick={() => {
             setIsOpen(!isOpen);
+            setTimeout(() => {
+              const footer = document.getElementById('footer');
+              if (footer) footer.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
           }}
         >
           About
-        </NavLink>
+        </a>
         <NavLink
           to="/contact"
           className="nav-link"
