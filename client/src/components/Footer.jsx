@@ -1,3 +1,4 @@
+import "../styles/footer.css";
 import {
   FaFacebook,
   FaTwitter,
@@ -17,7 +18,7 @@ const Footer = () => {
         </div>
         <div className="subscription-c2">
           <div>
-            <input type="email" name="" placeholder="Enter Your Email" id="" />
+            <input type="email" name="" placeholder="Enter Your Email" id="" style={{ color: '#111' }} />
             <button type="submit">Subscribe</button>
           </div>
         </div>
