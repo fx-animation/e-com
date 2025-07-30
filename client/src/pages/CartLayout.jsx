@@ -60,9 +60,9 @@ const CartLayout = () => {
   const handleCheckout = async () => {
     try {
       const response = await Axios.post(
-        "/payment/create-checkout-session",
+        "/api/v1/payment/create-checkout-session",
         { coupon: appliedCoupon ? couponCode.toUpperCase() : "" },
-        { headers: { Authorization: localStorage.getItem("jwt") } }
+        { headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` } }
       );
       console.log(response);
 
@@ -133,6 +133,7 @@ const CartLayout = () => {
         </div>
         <div className="cart-container-2">
           <div className="cartSummary">
+<<<<<<< HEAD
             {/* Affichage des coupons disponibles */}
             <div style={{ marginBottom: "1rem", background: "#ff008c", padding: "10px", borderRadius: "8px" }}>
               <strong>Profitez de nos coupons&nbsp;:</strong>
@@ -143,6 +144,10 @@ const CartLayout = () => {
                   </li>
                 ))}
               </ul>
+=======
+            <div style={{marginBottom: '10px', background: '#fff0fa', borderRadius: '8px', padding: '8px 12px', color: '#ff008c', fontWeight: 700, fontSize: '1rem', textAlign: 'center'}}>
+              Coupons disponibles : <span style={{margin: '0 6px', background: '#ffe6f5', borderRadius: '4px', padding: '2px 6px'}}>FXSTUDIO</span> <span style={{margin: '0 6px', background: '#ffe6f5', borderRadius: '4px', padding: '2px 6px'}}>NIKE2025</span>
+>>>>>>> 309d9276d5a0a910d782f185940a0033f93d6250
             </div>
             <h3 className="summaryHeader">Order Summary</h3>
             <div className="summaryInfo">

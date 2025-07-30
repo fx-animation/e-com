@@ -21,10 +21,17 @@ const ContactForm = () => {
         toast.error("Please fill all the fields");
         return;
       }
+<<<<<<< HEAD
       const mailtoLink = `mailto:fxstudicreation@gmail.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(
         `Hello fxstudio,\n\nMy name is ${name} and my email address is ${email}.\n\nI wanted to talk to you about the following:\n\n${message}\n\nLooking forward to hearing from you.\n\nBest Regards,\n${name}`
+=======
+      const mailtoLink = `mailto:fxstudiocreation@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(
+        `Hello FX Studio,\n\nMy name is ${name} and my email address is ${email}.\n\nI wanted to talk to you about the following:\n\n${message}\n\nLooking forward to hearing from you.\n\nBest Regards,\n${name}`
+>>>>>>> 309d9276d5a0a910d782f185940a0033f93d6250
       )}`;
       window.location.href = mailtoLink;
     } catch (error) {
