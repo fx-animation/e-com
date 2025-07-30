@@ -55,9 +55,9 @@ const CartLayout = () => {
   const handleCheckout = async () => {
     try {
       const response = await Axios.post(
-        "/payment/create-checkout-session",
+        "/api/v1/payment/create-checkout-session",
         { coupon: appliedCoupon ? couponCode.toUpperCase() : "" },
-        { headers: { Authorization: localStorage.getItem("jwt") } }
+        { headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` } }
       );
       console.log(response);
 
@@ -71,7 +71,7 @@ const CartLayout = () => {
   const applyCoupon = (coupon) => {
     if (!data || data.length <= 0) return toast.error("Cart is empty.");
     console.log(coupon.toUpperCase());
-    const listOfCoupons = ["SUMILSUTHAR197", "NIKE2024"];
+    const listOfCoupons = ["FXSTUDIO", "NIKE2025"];
     if (listOfCoupons.includes(coupon.toUpperCase())) {
       setCouponCode(coupon);
       setAppliedCoupon(true);
@@ -128,6 +128,9 @@ const CartLayout = () => {
         </div>
         <div className="cart-container-2">
           <div className="cartSummary">
+            <div style={{marginBottom: '10px', background: '#fff0fa', borderRadius: '8px', padding: '8px 12px', color: '#ff008c', fontWeight: 700, fontSize: '1rem', textAlign: 'center'}}>
+              Coupons disponibles : <span style={{margin: '0 6px', background: '#ffe6f5', borderRadius: '4px', padding: '2px 6px'}}>FXSTUDIO</span> <span style={{margin: '0 6px', background: '#ffe6f5', borderRadius: '4px', padding: '2px 6px'}}>NIKE2025</span>
+            </div>
             <h3 className="summaryHeader">Order Summary</h3>
             <div className="summaryInfo">
               <p>
