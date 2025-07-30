@@ -123,7 +123,7 @@ const Footer = () => {
                   </span>
                   <p>
                     <Link to="mailto:fxstudiocreation@gmail.com">
-                      e-com@gmail.com
+                      e-com@
                     </Link>
                   </p>
                 </li>

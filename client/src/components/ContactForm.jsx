@@ -21,7 +21,7 @@ const ContactForm = () => {
         toast.error("Please fill all the fields");
         return;
       }
-      const mailtoLink = `mailto:fxstudicreation@gmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:fxstudiocreation@gmail.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(
         `Hello fxstudio,\n\nMy name is ${name} and my email address is ${email}.\n\nI wanted to talk to you about the following:\n\n${message}\n\nLooking forward to hearing from you.\n\nBest Regards,\n${name}`
