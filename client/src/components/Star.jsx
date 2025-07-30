@@ -21,7 +21,7 @@ const Star = ({ rating, onRate }) => {
           return (
             <FaStar
               key={i}
-              color="#ffb400"
+              color="#ff008c"
               onMouseEnter={() => setHovered(i + 1)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => handleClick(i)}
@@ -33,7 +33,7 @@ const Star = ({ rating, onRate }) => {
           return (
             <FaStarHalfAlt
               key={i}
-              color="#ffb400"
+              color="#ff008c"
               onMouseEnter={() => setHovered(i + 1)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => handleClick(i)}
@@ -45,7 +45,7 @@ const Star = ({ rating, onRate }) => {
           return (
             <FaRegStar
               key={i}
-              color="#ffb400"
+              color="#ff008c"
               onMouseEnter={() => setHovered(i + 1)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => handleClick(i)}

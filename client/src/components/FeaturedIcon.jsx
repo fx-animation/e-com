@@ -1,4 +1,3 @@
-import React from "react";
 const features = [
   {
     imgSrc:
@@ -23,7 +22,7 @@ const features = [
 
 const FeaturedIcon = () => {
   return (
-    <section className="features">
+    <section className="features features-bg">
       {features.map((feature, index) => (
         <div key={index} className="features-icon">
           <div>

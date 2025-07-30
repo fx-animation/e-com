@@ -1,6 +1,49 @@
+/* Fond flouté pour le footer à partir de About us */
+.footer-bg {
+  position: relative;
+  overflow: hidden;
+}
+.footer-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/footer.avif') center/cover no-repeat;
+  filter: blur(2px) brightness(0.8);
+  z-index: 0;
+}
+.footer-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  background: url('/background.avif') center/cover no-repeat fixed;
+  background-color: #44403a70;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: inherit;
+  filter: blur(2.5px) brightness(0.8);
+  z-index: 0;
+  pointer-events: none;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
 .main-Container {
   text-align: center;
-  background-color: #f7ecde;
+  /* background-color: #f7ecde; */
+  background-color: #44403a70;
   position: relative;
   height: clamp(270px, 45vw, 2000px);
 }
@@ -66,11 +109,7 @@
   font-size: clamp(20px, 2.6vw, 16vw);
   line-height: 1;
 }
-.title h2 {
-  font-size: clamp(16px, 1.7vw, 12vw);
-  font-weight: 400;
-  color: gray;
-}
+/* .title h2 supprimé pour permettre à Tailwind text-black de s'appliquer */
 .shopping-gender {
   display: flex;
   justify-content: space-around;
@@ -202,7 +241,7 @@
   color: gray;
 }
 .star {
-  color: rgb(243, 181, 25);
+  color: #ff008c;
   font-size: clamp(13px, 2.5vw, 17px);
   display: flex;
   gap: 3px;
@@ -211,7 +250,7 @@
 .desc h4 {
   font-weight: 800;
   font-size: clamp(15px, 2.5vw, 19px);
-  color: #54bab9;
+  color: #ff008c;
   padding: 10px 0 0;
 }
 .btn-cart {
@@ -241,8 +280,9 @@
   bottom: 5px;
   right: 12px;
 }
+
 .countdown {
-  background-color: #f7ecde;
+  background: linear-gradient(rgba(68, 64, 58, 0.6), rgba(68, 64, 58, 0.6)), url('/countdown.avif') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,22 +291,31 @@
   font-family: "League Spartan", "Poppins", sans-serif;
   font-weight: 900;
 }
+
 .time-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  color: #54bab9;
+  color: #010101;
 }
+
 .time-title-2 {
   display: none;
+  color: #000;
+  font-weight: 900;
+}
+/* Forcer la couleur noire sur le texte de la collection été */
+.time-title-2 {
+  color: #000 !important;
+  font-weight: 900;
 }
 .countdown h1 {
   text-align: center;
   line-height: 50px;
   line-height: 1;
   font-size: clamp(19px, 2.5vw, 60px);
-  color: #1a1a1a;
+  color: #000000;
 }
 .time-container div {
   text-align: center;
@@ -279,7 +328,7 @@
 .time-container div span {
   height: clamp(42px, 5vw, 70px);
   width: clamp(42px, 5vw, 70px);
-  border: 2px solid #54bab9;
+  border: 2px solid #ff008c;
   display: flex;
   margin-bottom: 5px;
   align-items: center;
@@ -304,9 +353,12 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: #f7ecde;
   min-height: 170px;
   padding: 20px 60px;
+}
+
+.features-bg {
+  background: linear-gradient(rgba(68,64,58,0.5), rgba(68,64,58,0.5)), url('/shipping.avif') center/cover no-repeat;
 }
 .features-icon {
   display: flex;

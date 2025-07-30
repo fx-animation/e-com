@@ -5,13 +5,33 @@ import { FiSearch, FiMenu } from "react-icons/fi";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile, CgClose } from "react-icons/cg";
 import { BiLogIn } from "react-icons/bi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Axios from "../Axios";
 import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
+
   const navigate = useNavigate();
   const { auth, setAuth } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
+
+  // Synchronise le nombre d'articles du panier au refresh
+  useEffect(() => {
+    const token = localStorage.getItem("jwt");
+    if (!auth || !token) return;
+    Axios.get("/api/v1/cart", {
+      headers: { Authorization: token },
+    })
+      .then((res) => {
+        const items = res.data?.items || [];
+        const cartSize = items.reduce((sum, item) => sum + (item.qty || 0), 0);
+        if (auth.cartSize !== cartSize) {
+          setAuth({ ...auth, cartSize });
+        }
+      })
+      .catch(() => {});
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="navigation-bar">

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useContext } from "react";
-import kid from "../Images/kid.webp";
-import men from "../Images/men.webp";
-import women from "../Images/women.webp";
+import kid from "../Images/kid.avif";
+import men from "../Images/men.avif";
+import women from "../Images/women.avif";
 import Card from "../components/Card";
 import Container from "../components/Container";
 import Countdown from "../components/Countdown";
@@ -13,7 +13,7 @@ import { useLocation } from "react-router-dom";
 import { LoadingContext } from "./HomeLayout";
 
 const LandingPage = () => {
-  const { data, setData } = useContext(LoadingContext);
+  const { data } = useContext(LoadingContext);
   const trendingRef = useRef(null);
   const scrollToTop = () => {
     trendingRef.current.scrollIntoView({ behavior: "smooth" });
@@ -41,7 +41,7 @@ const LandingPage = () => {
 
       <section id="trending" className="title">
         <h1>New Arrivals</h1>
-        <h2>summer collection new modern design</h2>
+        <h2 className="text-black font-extrabold">summer collection new modern design</h2>
       </section>
 
       <Container />

@@ -22,7 +22,10 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <section className="footer">
+
+
+
+      <section className="footer footer-bg">
         <div className="footer-main">
           <div className="footer-container">
             <div className="sec aboutus">
@@ -57,12 +60,12 @@ const Footer = () => {
               <h2>Support</h2>
               <ul>
                 <li>
-                  <Link to="/" target="_blank" rel="noopener noreferrer">
+                  <Link  to="/" target="_blank" rel="noopener noreferrer">
                     FAQ
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" target="_blank" rel="noopener noreferrer">
+                  <Link  to="/" target="_blank" rel="noopener noreferrer">
                     Privacy Policy
                   </Link>
                 </li>
@@ -128,9 +131,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="copyrightText">
-            <p>Copyright ©{new Date().getFullYear()} e-com Studio</p>
+            <p>Copyright ©{new Date().getFullYear()} e-com </p>
             <p>
-              Made By{" "}
+               {" "}
               <Link
                 to="https://fxmobile.vercel.app/"
                 target="_blank"

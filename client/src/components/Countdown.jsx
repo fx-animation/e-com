@@ -51,8 +51,8 @@ const Countdown = () => {
       <div className="time-title-1">
         <h1>Make a purchase before </h1>
         <h1>
-          and get <span style={{ color: "#54bab9" }}>free delivery </span>and{" "}
-          <span style={{ color: "#54bab9" }}>upto 60% off</span>
+          and get <span style={{ color: "#ff008c" }}>free delivery </span>and{" "}
+          <span style={{ color: "#ff008c" }}>upto 60% off</span>
         </h1>
       </div>
       <div className="time-container">
@@ -74,8 +74,8 @@ const Countdown = () => {
       </div>
       <div className="time-title-2">
         <h1>
-          and get <span style={{ color: "#54bab9" }}>free delivery </span>and{" "}
-          <span style={{ color: "#54bab9" }}>upto 60% off</span>
+          and get <span style={{ color: "#ff008c" }}>free delivery </span>and{" "}
+          <span style={{ color: "#ff008c" }}>upto 60% off</span>
         </h1>
       </div>
     </section>

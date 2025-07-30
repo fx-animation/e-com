@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import Star from "./Star";
 import { memo, useState } from "react";
@@ -36,20 +36,16 @@ const Card = (data) => {
           onClose={() => setShowModal((prev) => !prev)}
         />
       )}
-      <Link to={`/product/${data.slug}`} style={{ textDecoration: "none" }}>
-        <div className="image-div">
-          <img src={data.image} alt="image" height="240px" loading="lazy" />
-        </div>
-      </Link>
-      <div className="desc">
-        <Link to={`/product/${data.slug}`} style={{ textDecoration: "none" }}>
-          <h5>{data.brand}</h5>
-          <h6>{toTitleCase(data.name)}</h6>
-        </Link>
-        <div className="star">
+      <div className="image-div">
+        <img src={data.image} alt="image" height="240px" loading="lazy" />
+      </div>
+      <div className="desc" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <h5 style={{ margin: 0, color: '#000', fontWeight: 900 }}>{data.brand}</h5>
+        <h6 style={{ margin: 0, color: '#000', fontWeight: 900 }}>{toTitleCase(data.name)}</h6>
+        <div className="star" style={{ margin: "0.3rem 0" }}>
           {<Star rating={data.ratingScore / data.ratings.length || 0} />}
         </div>
-        <h4>€ {data.price}</h4>
+        <h4 style={{ margin: 0 }}>€ {data.price}</h4>
       </div>
       <button
         className="btn-cart"
