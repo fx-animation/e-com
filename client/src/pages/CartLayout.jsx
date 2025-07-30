@@ -13,6 +13,11 @@ const CartLayout = () => {
   const [loading, setLoading] = useState(true);
   const [couponCode, setCouponCode] = useState("");
   const [appliedCoupon, setAppliedCoupon] = useState(false);
+  // Liste des coupons disponibles
+  const availableCoupons = [
+    { code: "FXSTUDIO", description: "10% de réduction sur tout le site" },
+    { code: "NIKE2025", description: "15% sur la collection Nike 2025" },
+  ];
 
   const token = localStorage.getItem("jwt");
   const updateData = useCallback(async (e) => {
@@ -71,7 +76,7 @@ const CartLayout = () => {
   const applyCoupon = (coupon) => {
     if (!data || data.length <= 0) return toast.error("Cart is empty.");
     console.log(coupon.toUpperCase());
-    const listOfCoupons = ["SUMILSUTHAR197", "NIKE2024"];
+    const listOfCoupons = ["FXSTUDIO", "NIKE2025"];
     if (listOfCoupons.includes(coupon.toUpperCase())) {
       setCouponCode(coupon);
       setAppliedCoupon(true);
@@ -128,6 +133,17 @@ const CartLayout = () => {
         </div>
         <div className="cart-container-2">
           <div className="cartSummary">
+            {/* Affichage des coupons disponibles */}
+            <div style={{ marginBottom: "1rem", background: "#ff008c", padding: "10px", borderRadius: "8px" }}>
+              <strong>Profitez de nos coupons&nbsp;:</strong>
+              <ul style={{ margin: 0, paddingLeft: "1.2em" }}>
+                {availableCoupons.map((c) => (
+                  <li key={c.code}>
+                    <span style={{ fontWeight: 600 }}>{c.code}</span> &mdash; {c.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
             <h3 className="summaryHeader">Order Summary</h3>
             <div className="summaryInfo">
               <p>
