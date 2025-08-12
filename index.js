@@ -29,10 +29,10 @@ app.get("/", (req, res) => {
   res.json({
     project: "Shoekart API",
     description:
-      "This is an API for an shoes E-commerce application. It provides endpoints for managing products, orders, and users.",
+      "This is an API for an E-commerce application. It provides endpoints for managing products, orders, and users.",
     author: {
-      name: "Sumil Suthar",
-      portfolio: "http://sumilsuthar.me/",
+      name: "fx",
+      portfolio: "http://fxmobile.vercel.app",
     },
     version: "1.0.0",
   });
